@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Room Reservations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="roomReservation.css">
+  </head>
+
+  <body>
+
+     <!--Top Banner-->
+     <div class="row" id="banner">
+      <div class="d-flex justify-content-between">
+        <div id="main">
+          <button class="homeButton" onclick="window.location.href = 'index.html'">
+              <i class="fa fa-home fa-2x"></i>
+          </button>
+          <!--<button class="backButton" onclick="goBack()">
+            <img src="return.png" class="back-btn" >
+          </button>-->
+          <button class="openbtn" id="open" onclick="openNav()">☰ Menu</button>
+          <!--<script>
+            function goBack() {
+            window.history.back();
+            }
+          </script> -->
+        </div>
+        <div class="banner-title">THE BRENDAN IRIBE CENTER</div>
+        <div id="current-time"></div>
+      </div>
+    </div>
+
+    <!--Nav Bar-->
+    <div id="mySideBar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a class="navtext" href="buildingMap.html">Building Map</a>
+      <a class="navtext" href="officeHours.html">Office Hours</a>
+      <a class="navtext" href="calendarEvents.html">Events</a>
+      <a class="navtext" href="facultyDirectory.html">Faculty Directory</a>
+      <a class="navtext active-link" href="roomReservation.html">Room Reservations</a>
+    </div>
+
+    <!--General Information-->
+  <div class="main-container" id="main-container">
+    <div class="header">
+      <h1>Room Reservation</h1>
+    </div>
+
+    <img id="keyboard1" src="keyboard.png" style="display:none;">
+    <div id="popupfree">
+      <h4 class="reserve">Reserve Room</h4>
+                <form>
+                  <div id="formpopup">
+                    <input type="submit" value="x" class="closebtn2">
+                    <div id="names">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" class="popupForm"><br><br>
+                    </div>
+                      <label for="id">Student ID:</label>
+                      <input type="text" id="id" name="id" class="popupForm"><br><br>
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" class="popupForm"><br><br>
+                  </div>
+                    <a href="javascript:void(0)" class="submit-reserve" onclick="closeWindow()">Submit</a>
+                </form>
+    </div>
+
+    <div id="popupoccupied">
+      <h4 class="roomOccupied">The room is unavailable at the selected time.</h4>
+                
+      <input type="submit" value="x" class="closebtn2" onclick="closeWindow2()">
+                  
+         
+    </div>
+  
+
+
+
+    <!-- Container for the various cs classes -->
+<div class="container" id="container">
+  <img id="keyboard" src="keyboard.png" style="display:none;">
+  <div class="search" id="searchkey">
+    <input type="text" id="filter-search" class="search1" placeholder="Search for Room" onkeyup ="filter()">
+    <button type="submit" onclick="filter()"><i class="fa fa-search"></i></button>
+  </div>
+    <div class="table" id="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Room</th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    
+                </tr>
+            </thead>
+            <tbody class="list" id="list">
+               <tr>
+                <td><b>IRB1119</b></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+               </tr>
+               <tr>
+                <td><b>IRB2113</b></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+               </tr>
+               <tr>
+                <td><b>IRB3115</b></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+               <tr>
+                <td><b>IRB5117</b></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="free"></td>
+                <td class="occupied"></td>
+                <td class="occupied"></td>
+               </tr>
+               
+            </tbody>
+
+        </table>
+        <p class="note">Reservations are for 30 minute time slots</p>
+    </div>
+</div>
+</div>
+
+   
+
+
+  <!--<script src="courseOH-131PS.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    let time = document.getElementById('current-time');
+    let time2 = document.getElementById('time');
+    setInterval(() =>{
+      let d = new Date();
+      time.innerHTML = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      //time2.innerHTML = d.toLocaleTimeString([], {hour: '2-digit'});
+    },1000)
+  </script>
+
+  <!--Filtering for the search bar-->
+  <script>
+    const searchInput = document.getElementById('filter-search');
+    searchInput.addEventListener('input', filterButtons);
+
+    const tableContainer = document.getElementById('list');
+    const rows = tableContainer.getElementsByTagName('tr');
+
+    function filterButtons(){
+      const searchString = searchInput.value.toLowerCase(); 
+      for(var i = 0; i < rows.length; i++){
+        const row = rows[i];
+        const rowText = row.textContent.toLowerCase();
+        if(rowText.indexOf(searchString) === -1){
+          row.style.display = 'none';
+        }
+        else{
+          row.style.display = '';
+        }
+      }
+    }
+  </script>
+
+  <!--Open and collapse side nav bar-->
+  <script>
+
+    document.getElementById('open').addEventListener("click", openNav);   
+    function openNav() {
+      document.getElementById("mySideBar").style.width = "270px";
+      document.getElementById("main").style.marginLeft = "270px";
+      document.getElementById("main-container").style.marginLeft = "270px";
+      document.getElementById("container").style.marginLeft = "auto";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySideBar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.getElementById("main-container").style.marginLeft = "0";
+      document.getElementById("container").style.marginLeft = "auto";
+    }
+    
+  </script>
+
+  <!--Keyboard image popup-->
+  <script>
+    const search = document.getElementById('searchkey');
+    const image = document.getElementById('keyboard');
+    search.addEventListener("click", function(event) {
+      image.style.display = "block";
+      event.stopPropagation();
+    });
+
+
+    document.addEventListener("click", function(event) {
+      if (event.target != image || event.target != search) {
+        image.style.display = "none";
+      }
+    });
+
+    document.addEventListener("keypress", function(event) {
+      if(event.key === 'Enter'){
+        if (event.target != image || event.target != search) {
+        image.style.display = "none";
+        }
+      }
+    });
+  </script>
+
+
+<!--Keyboard popup for reservation form -->
+<script>
+  const search1 = document.getElementById('formpopup');
+  const image1 = document.getElementById('keyboard1');
+  search1.addEventListener("click", function(event) {
+    image1.style.display = "block";
+    event.stopPropagation();
+  });
+
+
+  document.addEventListener("click", function(event) {
+    if (event.target != image1 || event.target != search1) {
+      image1.style.display = "none";
+    }
+  });
+
+  document.addEventListener("keypress", function(event) {
+    if(event.key === 'Enter'){
+      if (event.target != image1 || event.target != search1) {
+      image1.style.display = "none";
+      }
+    }
+  });
+</script>
+
+
+
+    <script>
+        // Get the current time
+        var currentTime = new Date();
+        
+        // Get the table header row
+        var tableHeader = document.getElementById("table").getElementsByTagName("thead")[0].getElementsByTagName("tr")[0];
+        
+        var currHour = currentTime.getHours();
+
+        var currentHour12 = (currHour % 12) || 12;
+
+        // Loop through each column in the header row
+        for (var i = 1; i < tableHeader.cells.length; i++) {
+        
+        
+        // Set the header cell text to the start time plus the difference in minutes
+        //tableHeader.cells[i].textContent = startTime.getHours() + ":" + startTime.getMinutes() + difference;
+        tableHeader.cells[i].textContent = currentHour12 + ":00"; 
+        currentHour12 += 1; 
+        currentHour12 = (currentHour12 % 12) || 12;
+
+        }
+    </script>
+
+<!--
+    <script>
+      var table = document.getElementById('table');
+
+      for(var i = 1, row; row = table.rows[i]; i++){
+        for(var j = 1, col; col = row.cells[j]; j++){
+          var classy = col.classList;
+          if (classy[0] === 'free'){
+            col.onclick = popUp('free');
+          }
+          else{
+            col.onclick = popUp('occupied');
+          }
+        }
+      }
+    </script> -->
+<!--
+    <script>
+      document.getElementsByClassName('free').addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "block";
+      });
+    </script> -->
+
+<!--
+    <script>
+        function popUp(status){
+            let popup = document.getElementById('popup');
+            if (status === "free"){
+                popup.innerHTML = `
+                <h4 class="reserve">Reserve Room</h4>
+                <form>
+                  <a href="javascript:void(0)" class="closebtn2" onclick="closeWindow()">×</a>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="popupForm"><br><br>
+                    <label for="id">Student ID:</label>
+                    <input type="text" id="id" name="id" class="popupForm"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="popupForm"><br><br>
+                    <input type="submit" value="Submit" class="reserveSubmit">
+                </form>
+
+            `;
+            popup.style.display = "block";
+
+            }
+            else{
+                popup.innerHTML = `
+                    <a href="javascript:void(0)" class="closebtn2" onclick="closeWindow()">×</a>
+                    <h4 class="roomOccupied">The room is unavailable at the selected time.</h4>
+                `;
+                popup.style.display = "block";
+            }
+            
+        }
+
+        function closeWindow() {
+        document.getElementById('popup').style.display = "none";
+    }
+    </script> -->
+
+  
+
+  <script>
+
+
+    const frees = document.querySelectorAll('.free');
+
+
+
+    frees.forEach(cell =>{
+      cell.addEventListener("click", fun1);
+
+      function fun1(){
+        const popup = document.getElementById('popupfree');
+        popup.style.display = "block";
+        cell.classList.remove("free");
+        cell.classList.add("occupied");
+        clickOccupied();
+      }
+
+      }) 
+
+     
+
+    function clickFree(){
+      const frees = document.querySelectorAll('.free');
+
+      frees.forEach(cell =>{
+        cell.addEventListener("click", fun1);
+
+        function fun1(){
+          const popup = document.getElementById('popupfree');
+          popup.style.display = "block";
+          cell.classList.remove("free");
+          cell.classList.add("occupied");
+          clickOccupied();
+
+        }})
+    }
+
+    function clickOccupied(){
+      const occupies = document.querySelectorAll(".occupied");
+      console.log(occupies.length);
+
+      occupies.forEach(cell => {
+        cell.addEventListener("click", function(){
+          const pops = document.getElementById('popupoccupied');
+          pops.style.display = "block";
+          const popup = document.getElementById('popupfree');
+          popup.style.display = "none";
+
+        })
+        if(cell.classList > 1){
+          cell.removeEventListener("click", fun1);
+        }
+        
+      
+      }
+      )
+    }
+
+    function closeWindow() {
+        document.getElementById('popupfree').style.display = "none";}
+        clickOccupied();
+        clickFree();
+  </script>
+
+  <script>
+    const occupies = document.querySelectorAll(".occupied");
+
+    occupies.forEach(cell => {
+      cell.addEventListener("click", function(){
+        const pops = document.getElementById('popupoccupied');
+        pops.style.display = "block";
+      })
+    })
+
+    function closeWindow2() {
+        document.getElementById('popupoccupied').style.display = "none";}
+  </script>
+
+  
+  </body>
+</html>

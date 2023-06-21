@@ -1,0 +1,358 @@
+:root{
+    --red: #e11833;
+    --black: #191716;
+    --blue: #008DD5;
+    --white: #FDFFFC;
+    --grey: #637081;
+    --red2: #F53322;
+    --red3: #FA6769; 
+    --beige: #D6C6B0; 
+    --beigebg: #D6C6B080;
+    --beige2: #e5daca;
+    --beige2bg: #e5daca70;
+    --lightbeige: #f5eee2;
+    --lightbeige2: #F5eee230; 
+    --lightbeigebg: #f5eee270;
+}
+*{
+    overflow-y: auto;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url(BarlowCondensed-Regular.ttf);
+}
+#banner{
+    background-image: linear-gradient(to right, var(--red
+    ), var(--red3));
+    opacity: 0.9;
+}
+.banner-title{
+    font-family: 'Barlow Condensed';
+    font-size: 40px;
+    margin-left: 10px;
+    color: #FDFFFC;
+    float:left;
+    padding: 7px;
+}
+#current-time{
+    font-family: 'Barlow Condensed';
+    color: #FDFFFC;
+    font-size: 40px;
+    float: right;
+    margin-right: 10px;
+    padding: 5px;
+}
+h1{
+    font-family: "Bebas Neue";
+    text-align: center;
+    color: var(--black);
+    padding-top: 10px;
+    font-size: 68px;
+}
+#boxbox{
+    position:relative;
+    display: inline-block;
+    width: 64%;
+}
+.box1{
+    position:relative;
+    width: 95%;
+    height: 390px;
+    background-color: var(--lightbeige);
+    float: left;
+    box-sizing: border-box;
+    margin-left: 2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+.box3{
+    position:relative;
+    width: 95%;
+    height: 300px;
+    background-color: var(--lightbeige);
+    float: left;
+    box-sizing: border-box;
+    margin-left: 2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+.box2{
+    position:relative;
+    width: 30%;
+    height: 700px;
+    background-color: var(--lightbeige);
+    /*background-image: linear-gradient(var(--beige), var(--beige2)); */
+    float: right;
+    box-sizing: content-box;
+    margin-right: 2%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+table, th, td {
+    border: 2px solid var(--lightbeige);
+    border-collapse: collapse;
+    background-color: var(--beige);
+  }
+.currOH{
+    font-family: 'Barlow Condensed';
+    text-align: center;
+    font-size: 42px;
+    padding-top: 2px;
+
+}
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Condensed';
+    font-size: 32px;
+    color: 
+    #2e2f2f;
+
+}
+.current-OH-table{
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+}
+.curr{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Condensed';
+    font-size: 32px;
+    color: #2e2f2f; 
+}
+
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    font-family: 'Barlow Condensed';
+    font-size: 32px;
+    border: 3px solid #AA9A83;
+}
+td{
+    font-family: 'Barlow Condensed';
+    font-size: 28px;
+}
+.loca-button{
+    text-decoration: underline;
+}
+.classlist{
+    font-family: 'Barlow Condensed';
+    font-size: 40px;
+    text-align: center;
+    padding-top: 2px;
+}
+.buttons{
+    align-items: center;
+
+}
+.search{
+    text-align: center;
+    display: flex;
+}
+.search button{
+    height: 48px;
+    background-color: var(--beige);
+    border: none;
+}
+.search button:hover{
+    background-color: var(--beige2bg);
+}
+.search1{
+    border: none;
+    height: 48px;
+    width: 320px;
+    padding: 2px 23px 2px 38px;
+    outline: 0;
+    background-color: var(--white);
+    margin-bottom: 2px;
+}
+#searchKey{
+    cursor: pointer;
+}
+#keyboard{
+    position: absolute;
+    top: 58%;
+    left: 65%;
+    transform: translate(-50%);
+    z-index: 1;
+    width: 1000px;
+    height: auto;
+    transition: 0.5s;
+    animation: slide-up 0.5s ease-out forwards;
+}
+@keyframes slide-up {
+    from {
+      bottom: -100px;
+      opacity: 0.8;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  
+  
+.navbar{
+    background-color: var(--lightbeige);
+    justify-content: center;
+}
+.btn-group{
+    text-align: center;
+    overflow-y: auto;
+    display: block;
+    height: 80%;
+
+}
+.btns{
+    width: 78%;
+    background-color: var(--beige);
+    /*background-color: var(--lightbeige); */
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border-color: var(--beige2);
+    font-family: 'Barlow Condensed';
+    font-size: 28px;
+    height: 18%;
+}
+.btn-group button:hover{
+    background-color: var(--lightbeige2);
+    border-color: var(--beige2);
+    border-width:3px;
+}
+.card{
+    background-color: var(--lightbeige);
+    overflow-y: scroll;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--beige);
+    overflow-x: auto;
+    transition: 0.5s;
+    padding-top: 60px;
+
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 32px;
+    color: var(--black);
+    display: block;
+    transition: 0.3s;
+    font-family: 'Barlow Condensed';
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 38px;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    padding-bottom: 5px;
+    font-size: 60px;
+    text-align: left;
+    color: var(--grey)
+  }
+  .sidebar .closebtn:hover {
+    font-size: 66px;
+  }
+  
+  .openbtn {
+    font-size: 30px;
+    font-family: 'Barlow Condensed';
+    cursor: pointer;
+    background-color: var(--red);
+    color: white;
+    padding: 2px 5px;
+    border: none;
+    top: 0px;
+  }
+  
+  .openbtn:hover {
+    background-color: var(--red3);
+  }
+
+  .active-link{
+    color: #f1f1f1 !important;
+    font-size: 38px !important;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    visibility: hidden;
+  }
+  #main-container{
+    transition: margin-left .5s;
+  }
+
+  #temperature{
+    font-size: 40px;
+    font-family: 'Barlow Condensed';
+  }
+
+  #map_img{
+    margin-left: 5%;
+  }
+
+  .colorbox{
+    vertical-align: sub;
+    display: inline-block;
+  }
+
+  #mapLegend{
+    font-size: 20px;
+    font-family: 'Barlow Condensed';
+  }
+
+  .news-img{
+    width: 20%;
+    margin-left: 10%;
+    border-radius: 6px;
+  }
+
+  .news-info{
+    width: 50%;
+    margin-left: 10%;
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 3%;
+  }
+
+  .news-card{
+    display: inline-flex;
+    font-size: 20px;
+    font-family: 'Barlow Condensed';
+    margin-top: 3%;
+  }

@@ -1,0 +1,40 @@
+Fawzi Emad, Senior Lecturer, CMSC132FawziEman.html, IRB 2212, https://www.cs.umd.edu/~fpe/
+Clifford Bakalian, Lecturer, CMSC330CliffBakalian.html, IRB 1144, https://www.cliffbakalian.dev
+Pedram Sadeghian, Lecturer, CMSC131PedramSadeghian.html, IRB 1214, https://ani0075saha.github.io
+Evan Golub, Principal Lecturer, CMSC131Pedram Sadeghian.html, IRB 1210, http://www.cs.umd.edu/~egolub/professional.shtml
+Soheil Feizi, Assistant Professor, CMSC131Pedram Sadeghian.html, IRB 1202, https://www.cs.umd.edu/~sfeizi/
+Michael Marsh, Lecturer, CMSC131Pedram Sadeghian.html, IRB 2218, https://mhicks.me
+Michel Cummings, Affiliate Professor, CMSC131Pedram Sadeghian.html, IRB 3240, https://biology.umd.edu/people/michael-cummings
+Daniel Abadi,Darnell-Kanal Professor of Computer Science, officeHours.html, IRB 5156, https://www.cs.umd.edu/~abadi/
+Ashok Agrawala, Professor, officeHours.html, IRB 5204, https://www.cs.umd.edu/~agrawala/
+Andreea Alexandru, Post-Doctoral Associate, officeHours.html, IRB 5252, https://andreea-alexandru.github.io
+John Aloimonos, Professor, officeHours.html, IRB 4214, http://users.umiacs.umd.edu/~yiannis/
+William Arbaugh, Associate Professor Emeritus, officeHours.html, IRB 2164, https://www.cs.umd.edu/~waa/UMD/Home.html
+Bahar Asgari, Assistant Professor, officeHours.html, IRB 5148, https://www.cs.umd.edu/~bahar/
+Victor Basili, Professor Emeritus - Research Professor, officeHours.html, IRB 2164, https://www.cs.umd.edu/~basili/
+Leilani Battle, Adjuct Assitant Professor, officeHours.html, IRB 5148, None
+Aniket Bera, Affiliate Assistant Research Professor, officeHours.html, IRB 5144, https://www.cs.purdue.edu/homes/ab/
+Abhinav Bhatele, Associate Professor, officeHours.html, IRB 5218, https://www.cs.umd.edu/~bhatele/
+Bobby Bhattacharjee, Professor, officeHours.html, IRB 5140, https://www.cs.umd.edu/~bobby/
+Jordan Boyd-Graber, Associate Professor, officeHours.html, IRB 4146, http://users.umiacs.umd.edu/~jbg/
+Marine Carpuat, Associate Professor, officeHours.html, IRB 4130, https://www.cs.umd.edu/~marine/
+Rance Cleveland, Professor-CMNS Associate Dean for Research, officeHours.html, IRB 3226, https://www.cs.umd.edu/~rance/
+Hector Corrada Bravo, Adjuct Associate Professor, officeHours.html, IRB 3226, http://www.hcbravo.org
+Michel Cummings, Affiliate Professor, officeHours.html, IRB 3240, https://biology.umd.edu/people/michael-cummings
+Hal Daume III, Professor-Volpi-Cupal Family Endowed Professor, officeHours.html, IRB 4150, http://users.umiacs.umd.edu/~hal/
+Larry Davis, Professor Emeritus, officeHours.html, IRB 4248, https://lsd.umiacs.io
+Leila de Floriani, Affiliate Professor, officeHours.html, IRB 4132, http://users.umiacs.umd.edu/~deflo/
+Desphane Amol, Professor, officeHours.html, IRB 5154, https://www.cs.umd.edu/~amol/
+John Dickerson, Associate Professor, officeHours.html, IRB 4128, https://jpdickerson.com
+Bonnie Dor, Professor Emerita, officeHours.html, IRB 5228, http://users.umiacs.umd.edu/~bonnie/
+Ramani Duraiswami, Professor, officeHours.html, IRB 4244, http://users.umiacs.umd.edu/~ramani/
+Naomi Feldman, Affiliate Associate Professor, officeHours.html, IRB 4140, http://users.umiacs.umd.edu/~nhf/
+Jeffrey Foster, Adjunc Professor, officeHours.html, IRB 2162, https://www.cs.tufts.edu/~jfoster/
+William Gasarch, Professor, officeHours.html, IRB 2242, https://www.cs.umd.edu/~gasarch/
+Jonas Geiping, Post-Doctoral Associate, officeHours.html, IRB 5124, https://jonasgeiping.github.io
+Tom Goldtein, Associate Professor, officeHours.html, IRB 4212, https://www.cs.umd.edu/~tomg/
+Elias Gonzalez, Lecturer - Curriculum Innovation Lead- Break Through Tech, officeHours.html, IRB 1252, https://eliasgonzalez.me
+Mohammad Hajiaghayi, Professor, officeHours.html, IRB 5158, https://www.cs.umd.edu/~hajiagha/
+Larry Herman, Lecturer, officeHours.html, IRB 1124, None
+Michael Hicks, Professor Emeritus, officeHours.html, IRB 5246, https://mhicks.me
+Jeffrey K. Hollingsworth, Professor - Vice President & CIO of University of MD, officeHours.html, IRB 5152, https://www.cs.umd.edu/~hollings/

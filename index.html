@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiosk Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <!--Top Banner-->
+    <div class="row" id="banner">
+      <div class="d-flex justify-content-between">
+       <div id="main">
+          <button class="openbtn" id="open" onclick="openNav()">☰ Menu</button>
+        </div>
+        <div class="banner-title">THE BRENDAN IRIBE CENTER</div>
+        <div id="current-time"></div>
+      </div>
+    </div>
+
+
+    <!--Main Content-->
+    <div class="main-container" id="main-container">
+      <h1>Welcome</h1>
+      <img id="keyboard" src="keyboard.png" style="display:none;">
+      <div id="boxbox">
+        <div class="box1">
+          <nav class="navbar sticky-top">
+            <div class="pos">
+              <div class="header"><h4 class="currOH"><b>Menu</b></h4></div>
+           </div>
+          </nav>
+
+          <div class="btn-group" id="btn-group">
+            <button class="btns" onclick="location.href = 'buildingMap.html';">Building Map</button>
+            <button class="btns" onclick="location.href ='officeHours.html';">Office Hours</button>
+            <button class="btns" onclick="location.href ='calendarEvents.html';">Events</button>
+            <button class="btns" onclick="location.href ='facultyDirectory.html';">Faculty Directory</button>
+            <button class="btns" onclick="location.href ='roomReservation.html';">Room Reservations</button>
+
+          </div>
+          
+        </div>
+
+        <div class="box3">
+            <nav class="navbar sticky-top">
+              <div class="pos">
+                <div class="header"><h4 class="currOH"><b>Department of Computer Science Recent News</b></h4></div>
+             </div>
+            </nav>
+  
+            <div id="recent-news">
+                <div class="news-card">
+                    <img class="news-img" src="Yiling_headshot.png">
+                    <div class="news-info">
+                        <span>Yiling Qiao Awarded Meta Ph.D. Fellowship for Virtual and Augmented Reality Research</span>
+                        <br>
+                        <br>
+                        <a href="https://www.cs.umd.edu/article/2023/04/yiling-qiao-awarded-meta-phd-fellowship-virtual-and-augmented-reality-research">Click Here to Read More</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img class="news-img" src="UMIACS_quantum_art.jpg">
+                    <div class="news-info">
+                        <span>$1M NSF Award Supports Reimagining Cryptography in a Post-Quantum World</span>
+                        <br>
+                        <br>
+                        <a href="https://www.cs.umd.edu/article/2023/04/1m-nsf-award-supports-reimagining-cryptography-post-quantum-world">Click Here to Read More</a>
+                    </div>
+                </div>
+              
+            </div>
+            
+        </div>
+      </div>
+
+        <div class="box2">
+          <nav class="navbar sticky-top">
+            <h4 class="classlist"><b>Campus Highlights</b></h4>
+          </nav>
+
+          <img id='map_img' src="map_drawing.png" width="90%">
+          <div id="mapLegend">
+            <div class="colorbox" style="background-color: #B61F07 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            Brendan Iribe Center (you are here)
+            <br>
+            <div class="colorbox" style="background-color: #4E3514 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            McKeldin Library
+            <br>
+            <div class="colorbox" style="background-color: #DE799C ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            McKeldin Mall
+            <br>
+            <div class="colorbox" style="background-color: #2F80E1 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            STAMP Student Union
+            <br>
+            <div class="colorbox" style="background-color: #587431 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            SECU Football Stadium
+            <br>
+            <div class="colorbox" style="background-color: #FD6B13 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            Eppley Recreation Center
+            <br>
+            <div class="colorbox" style="background-color: #CC9E22 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            XFinity Center
+            <br>
+            <div class="colorbox" style="background-color: #732A91 ; padding: 10px; width: 3px; margin-left: 5%; margin-top: 5%;"></div>
+            Clarice Smith Performing Arts Center
+        </div>
+
+            <br>
+            <br>
+
+
+          </div>
+          
+        </div>
+    </div>
+  
+    
+
+  <script src="office-hours.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!--Get the current time-->
+  <script>
+    let time = document.getElementById('current-time');
+    let time2 = document.getElementById('time');
+    setInterval(() =>{
+      let d = new Date();
+      time.innerHTML = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      time2.innerHTML = d.toLocaleTimeString([], {hour: '2-digit' , minute:'2-digit'});
+    },1000)
+  </script>
+
+  <!--Open and collapse side nav bar-->
+  <script>
+
+    document.getElementById('open').addEventListener("click", openNav);   
+    function openNav() {
+      document.getElementById("mySideBar").style.width = "270px";
+      document.getElementById("main").style.marginLeft = "270px";
+      document.getElementById("main-container").style.marginLeft = "270px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySideBar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.getElementById("main-container").style.marginLeft = "0";
+    }
+  </script>
+
+  </body>
+</html>

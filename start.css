@@ -1,0 +1,66 @@
+:root{
+    --red: #B02E0C;
+    --black: #191716;
+    --blue: #008DD5;
+    --white: #FDFFFC;
+    --grey: #637081;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url(BarlowCondensed-Regular.ttf);
+}
+h1, h2, h3 {
+    font-family: 'Bebas Neue';
+    font-size: 86px;
+    color: #B02E0C;
+}
+.title{
+    text-align: center;
+
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.body{
+    font-family: 'Barlow Condensed';
+    font-size: 32px;
+    color:#637081;
+    text-align: center;
+}
+#menuRowOne{
+    margin: 0;
+    bottom: 0%;
+    position: absolute;
+    text-align: center;
+    height: 75%;
+    width: 100%;
+}
+#menuRowTwo{
+    margin: 0;
+    bottom: 0%;
+    position: absolute;
+    text-align:center;
+    height: 40%;
+    width: 100%;
+
+}
+.circle{
+    font-family: 'Barlow Condensed';
+    font-size: 32px;
+    color:#637081;
+    line-height: 730%;
+    border: 0.1875em solid var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    height: 8em;
+    width: 8em;
+}

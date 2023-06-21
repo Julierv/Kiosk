@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiosk Calendar of Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="calendarEvents.css">
+  </head>
+
+  <body>
+
+     <!--Top Banner-->
+     <div class="row" id="banner">
+      <div class="d-flex justify-content-between">
+        <div id="main">
+            <button class="homeButton" onclick="window.location.href = 'index.html'">
+                <i class="fa fa-home fa-2x"></i>
+            </button>
+          <button class="openbtn" id="open" onclick="openNav()">☰ Menu</button>
+        </div>
+        <div class="banner-title">THE BRENDAN IRIBE CENTER</div>
+        <div id="current-time"></div>
+      </div>
+    </div>
+
+    <!--Nav Bar-->
+    <div id="mySideBar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a class="navtext" href="buildingMap.html">Building Map</a>
+      <a class="navtext" href="officeHours.html">Office Hours</a>
+      <a class="navtext active-link" href="calendarEvents.html">Events</a>
+      <a class="navtext" href="facultyDirectory.html">Faculty Directory</a>
+      <a class="navtext" href="roomReservation.html">Room Reservations</a>
+    </div>
+
+    <!--General Information-->
+  <div class="main-container" id="main-container">
+    <div class="header">
+      <h1>Calendar of Events</h1>
+      <p class="title">April 2023</p>
+    </div>
+
+    <div id="popup">
+    </div>
+
+
+
+    <!-- Container for the calendar -->
+<div class="container" id="container">
+  <img id="keyboard" src="keyboard.png" style="display:none;">
+    <div class="calendarTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sunday</th>
+                    <th> Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="otherMonth">26</td>
+                    <td class="otherMonth">27</td>
+                    <td class="otherMonth">28</td>
+                    <td class="otherMonth">29</td>
+                    <td class="otherMonth">30</td>
+                    <td class="otherMonth">31</td>
+                    <td>1</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>2</td>
+                    <td>3
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                        <div class="event" onclick="popUp('PhD Defense: An efficient neural representation for videos', '5:00PM-7:00PM', 'As the popularity of videos increases, it becomes crucial to find efficient and compact ways of representing them to facilitate their storage, transmission, and downstream video tasks. During his Ph.D, Hao introduced an innovative neural representation for videos called NeRV, in which each video is stored implicitly as a neural network. Building on NeRV, he proposed a hybrid representation for videos (HNeRV) resulting in improved internal generalization and representation capacity. It allows for highly efficient video representation and compression, with a model size that is up to 1000 times smaller than the original raw video. Besides efficiency, HNeRV’s simple decoding process - a feedforward operation - enables fast video loading and easy deployment. Consequently, we developed an efficient neural video dataloader (NVLoader) that is 3-6 times faster than conventional video dataloaders. To address encoding speed, we introduced the HyperNeRV framework, which uses a hypernetwork to directly map input videos to NeRV model weights, speeding up the encoding process by 10^4 times. Aside from developing compact and implicit video neural representations, we explore several compelling applications based on them, such as frame interpolation, video restoration, and video editing. Moreover, the compactness of these representations makes them an ideal output video format that significantly reduces the search space or an efficient input for video understanding models.', 'buildingMap4.html?event=1', 'IRB 4105', true)">
+                            <span class="event-time">5:00PM-7:00PM</span>
+                            <br>
+                            <span class="event-name">PhD Defense: An efficient neural representation for videos</span>
+                        </div>
+                    </td>
+                    <td>4
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>5</td>
+                    <td>6
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>7
+                        <div class="event" onclick="popUp('Prospective Student Workshop', '11:00AM-1:00PM', '', '', '', false)">
+                            <span class="event-time">11:00AM-1:00PM</span>
+                            <br>
+                            <span class="event-name">Prospective Student Workshop</span>
+                        </div>
+                    </td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                        <div class="event" onclick="popUp('Datathon Registration Deadline', '5:00PM', '', '', '', false)">
+                            <span class="event-time">5:00PM</span>
+                            <br>
+                            <span class="event-name">Datathon Registration Deadline</span>
+                        </div>
+                    </td>
+                    <td>11
+                        <div class="event" onclick="popUp('2D priors for 3D generation', '11:00AM-12:00PM', 'Large scale datasets of images with text descriptions have enabled powerful models that represent and generate pixels. But progress in 3D generation has been slow due to the lack of 3D data and efficient architectures. In this talk, I’ll present DreamFields and DreamFusion: two approaches that enable 3D generation from 2D priors using no 3D data. By turning 2D priors into loss functions, we can optimize 3D models (NeRFs) from scratch via gradient descent. These methods enable high-quality generation of 3D objects from diverse text prompts. Finally, I’ll discuss a fundamental problem with our approach and how progress on pixel-space priors like Imagen Video and 3DiM may unlock new 3D capabilities.', 'buildingMap3.html?event=1', 'IRB 3137', true)">
+                            <span class="event-time">11:00AM-12:00PM</span>
+                            <br>
+                            <span class="event-name">2D priors for 3D generation</span>
+                        </div>
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>12</td>
+                    <td>13
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>14
+                        <div class="event" onclick="popUp('Computational Finance Minor Priority Consideration Application Deadline', '4:00PM', '', '', '', false)">
+                            <span class="event-time">4:00PM</span>
+                            <br>
+                            <span class="event-name">Computational Finance Minor Priority Consideration Application Deadline</span>
+                        </div>
+                    </td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>18
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>19
+                        <div class="event" onclick="popUp('Geico Office Hours', '1:00PM-4:00PM', '', 'https\:\/\/umd-csm.symplicity.com/students/?s=event&ss=is&mode=form&id=750cc0443dac398bb257b745f3bfe78e&signin_tab=0', '', false)">
+                            <span class="event-time">1:00PM-4:00PM</span>
+                            <br>
+                            <span class="event-name">Geico Office Hours</span>
+                        </div>
+                        <div class="event" onclick="popUp('Geico Tech Talk', '5:00PM-7:00PM', '', 'https\:\/\/umd-csm.symplicity.com/students/?s=event&ss=is&mode=form&id=f807ff58f29588bd4bf69e68ba2f9f26', '', false)">
+                            <span class="event-time">5:00PM-7:00PM</span>
+                            <br>
+                            <span class="event-name">Geico Tech Talk</span>
+                        </div>
+                    </td>
+                    <td>20
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>24
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>25
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>26</td>
+                    <td>27
+                        <div class="event" onclick="popUp('Virtual Drop-in Advising', '1:30PM-3:30PM', '*Note that you must be logged in to Zoom with your UMD credential to ensure being seen in drop-in advising*', 'https\:\/\/forms.gle/CR7h18kTtkAfxiEh7', '', false)">
+                            <span class="event-time">1:30PM-3:30PM</span>
+                            <br>
+                            <span class="event-name">Virtual Drop-in Advising</span>
+                        </div>
+                    </td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td class="otherMonth">1</td>
+                    <td class="otherMonth">2</td>
+                    <td class="otherMonth">3</td>
+                    <td class="otherMonth">4</td>
+                    <td class="otherMonth">5</td>
+                    <td class="otherMonth">6</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</div>
+
+   
+
+
+  <!--<script src="courseOH-131PS.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    let time = document.getElementById('current-time');
+    let time2 = document.getElementById('time');
+    setInterval(() =>{
+      let d = new Date();
+      time.innerHTML = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      time2.innerHTML = d.toLocaleTimeString([], {hour: '2-digit' , minute:'2-digit'});
+    },1000)
+  </script>
+
+  <!--Open and collapse side nav bar-->
+  <script>
+
+    document.getElementById('open').addEventListener("click", openNav);   
+    function openNav() {
+      document.getElementById("mySideBar").style.width = "270px";
+      document.getElementById("main").style.marginLeft = "270px";
+      document.getElementById("main-container").style.marginLeft = "270px";
+      document.getElementById("container").style.marginLeft = "auto";
+
+    }
+    
+    function closeNav() {
+      document.getElementById("mySideBar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.getElementById("main-container").style.marginLeft = "0";
+      document.getElementById("container").style.marginLeft = "auto";
+      
+    }
+
+  </script>
+
+
+  <!--Open and collapse event information-->
+  <script>
+
+    function popUp(name, time, message, link, room, inPerson) {
+        let popup = document.getElementById('popup');
+        if (link != '') {
+            if (inPerson) {
+                popup.innerHTML = '<span class=\'popupname\'>' + name + '</span> <br> <span class=\'popuptime\'>' + time + '</span> <br> <span class=\'popupmessage\'>' + message + '</span> <br> <a class=\'popuplink\' href="' + link + '">Directions to ' + room + '</a> <br> <button onclick="closeWindow()">Close</button>';
+            }
+            else {
+                popup.innerHTML = '<span class=\'popupname\'>' + name + '</span> <br> <span class=\'popuptime\'>' + time + '</span> <br> <span class=\'popupmessage\'>' + message + '</span> <br> <a class=\'popuplink\' href="' + link + '">Link to Event</a> <br> <button onclick="closeWindow()">Close</button>';
+            }
+        } else {
+            popup.innerHTML = '<span class=\'popupname\'>' + name + '</span> <br> <span class=\'popuptime\'>' + time + '</span> <br> <span class=\'popupmessage\'>' + message + '</span> <br> <button onclick="closeWindow()">Close</button>';
+        }
+        popup.style.visibility = "visible";
+    }
+
+    function closeWindow() {
+        document.getElementById('popup').style.visibility = "hidden";
+    }
+  </script>
+ 
+  </body>
+</html>

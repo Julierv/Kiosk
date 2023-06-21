@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiosk Office Hours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="office-hours.css">
+
+    <style>/* copied my table style, so cahnged if you want, its bad :( */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: center;
+        padding: 35px;
+        border: 1px solid rgb(255, 255, 255);
+      }
+      th {
+        background-color: #B02E0C;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f8f8f8;
+      }
+      
+    </style>
+  </head>
+
+  <body onload="showHours()">
+    <button class="backButton" onclick="window.location.href='menu.html';">
+      <img src="back-arrow.png" class="back-btn" >
+    </button>
+    <h4>Undergraduate Office Hours</h4>
+
+  <!-- Container for searching course codes-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 mb-3">
+        <input type="text" id="Course" class="form-control" onkeyup="myFunction()" placeholder="Search by Course Code...">
+      </div>
+    </div>
+
+    <!-- Container for searching professors-->
+    <div class="row">
+      <div class="col-sm-12 mb-3">
+        <input type="text" id="Prof" class="form-control" onkeyup="myFunction2()" placeholder="Search by Professor...">
+      </div>
+    </div>
+
+    <!-- Container for the various cs classes -->
+    <div id="card-container" class="row">
+
+    </div>
+      <!-- <div class="row">
+        <label>Filter By:  </label>
+        <div class="col-sm-6 mb-3">
+          <button id="prof">Professor</button>
+          <div id="dropdown">
+            <input type="text" id="input" placeholder="Search Professor...">
+          </div>
+
+          </select>
+        </div>
+      </div> -->
+
+
+    <!--The cards for the various classes
+    <div id='myItems'>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 131</h5>
+              <p class="card-text">Pedram Sadeghian</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 132</h5>
+              <p class="card-text">Pedram Sadeghian</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 132</h5>
+              <p class="card-text">Fawzi Emad</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 132</h5>
+              <p class="card-text">Elias Gonzalez</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 216</h5>
+              <p class="card-text">Larry Herman</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 250</h5>
+              <p class="card-text">Evan Golub</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 330</h5>
+              <p class="card-text">XX XX</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 351</h5>
+              <p class="card-text">XX XX</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">CMSC 4XX</h5>
+              <p class="card-text">XX XX</p>
+              <a href="#" class="btn btn-primary card-btn">View Office Hours</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   </div>-->
+
+
+   <div class="DayFilters">
+    <div class="filter">
+      <p>Filter By:  </p>
+    </div>
+    <div class="dayfilter">
+      <button class="filter-btn">Sunday</button>
+      <button class="filter-btn">Monday</button>
+      <button class="filter-btn">Tuesday</button>
+      <button class="filter-btn">Wednesday</button>
+      <button class="filter-btn">Thursday</button>
+      <button class="filter-btn">Friday</button>
+      <button class="filter-btn">Saturday</button>
+    </div>
+   </div>
+
+   <div class="DayFilters">
+    <div class="filter">
+      <p>Filter By:  </p>
+    </div>
+    <div class="dayfilter">
+      <button class="filter-btn">Professor</button>
+      <button class="filter-btn">Course</button>
+    </div>
+   </div>
+  </div>
+
+
+
+
+  <table id="data">
+		<thead>
+			<tr>
+				<th>Course</th>
+				<th>Day</th>
+				<th>Start</th>
+				<th>End</th>
+				<th>TA</th>
+				<th>Location</th>
+				<th>Instructor</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script src="script2.js"></script>
+
+
+
+
+
+
+  <script src="office-hours.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  
+  </body>
+</html>

@@ -1,4 +1,4 @@
-# CMSC434-kiosk 
+# Iribe Center Kiosk - UMD
 
 Kiosk helper for the Brendan Iribe Center building at the University of Maryland
 
